@@ -1,0 +1,44 @@
+\doxysection{motor\+\_\+driver.\+h}
+\hypertarget{motor__driver_8h_source}{}\label{motor__driver_8h_source}\index{C:/Users/their/STM32CubeIDE/workspace\_1.15.0/Lab3cpp/Core/Src/motor\_driver.h@{C:/Users/their/STM32CubeIDE/workspace\_1.15.0/Lab3cpp/Core/Src/motor\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ motor\_driver.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Apr\ 18,\ 2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ their}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_MOTOR\_DRIVER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_MOTOR\_DRIVER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//struct\ \{}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ TIM\_HandleTypeDef\ timer;}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ uint32\_t\ IN1;}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ uint32\_t\ IN2;}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ \ int32\_t\ \ duty;}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\}\ typedef\ motor\_type;}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmotor__driver}{motor\_driver}}\{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ TIM\_HandleTypeDef*\ timer;}
+\DoxyCodeLine{00023\ \ \ \ \ uint32\_t\ IN1;}
+\DoxyCodeLine{00024\ \ \ \ \ uint32\_t\ IN2;}
+\DoxyCodeLine{00025\ \ \ \ \ int32\_t\ \ duty;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classmotor__driver}{motor\_driver}}(TIM\_HandleTypeDef*\ timer,uint32\_t\ IN1,uint32\_t\ IN2);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmotor__driver_a2eead506aa81b940f85787c52214a6d0}{set\_duty}}(int32\_t\ duty);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmotor__driver_a7251c64e7235e85e12ad28823affb8e5}{brake}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmotor__driver_a9bbff5bb76623a2cc1d5d149fd7d7f01}{standby}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_MOTOR\_DRIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

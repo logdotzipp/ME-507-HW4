@@ -1,0 +1,76 @@
+\doxysection{motor\+\_\+driver Class Reference}
+\hypertarget{classmotor__driver}{}\label{classmotor__driver}\index{motor\_driver@{motor\_driver}}
+
+
+Controls a DC motor using PWM and an HBridge Controller.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmotor__driver_a10e404956657dd1d0f224270bf9b6257}\label{classmotor__driver_a10e404956657dd1d0f224270bf9b6257} 
+{\bfseries motor\+\_\+driver} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}timer, uint32\+\_\+t IN1, uint32\+\_\+t IN2)
+\item 
+void \mbox{\hyperlink{classmotor__driver_a2eead506aa81b940f85787c52214a6d0}{set\+\_\+duty}} (int32\+\_\+t duty)
+\begin{DoxyCompactList}\small\item\em Sets motor speed and direction. \end{DoxyCompactList}\item 
+\Hypertarget{classmotor__driver_a7251c64e7235e85e12ad28823affb8e5}\label{classmotor__driver_a7251c64e7235e85e12ad28823affb8e5} 
+void {\bfseries brake} ()
+\begin{DoxyCompactList}\small\item\em Puts the motor into brake mode. \end{DoxyCompactList}\item 
+\Hypertarget{classmotor__driver_a9bbff5bb76623a2cc1d5d149fd7d7f01}\label{classmotor__driver_a9bbff5bb76623a2cc1d5d149fd7d7f01} 
+void {\bfseries standby} ()
+\begin{DoxyCompactList}\small\item\em Puts motor into coast mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmotor__driver_a15000436e7a85a7d085890e9e314c7c2}\label{classmotor__driver_a15000436e7a85a7d085890e9e314c7c2} 
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries timer}
+\item 
+\Hypertarget{classmotor__driver_abef45f70600dd5f1c35bfe57ce6db994}\label{classmotor__driver_abef45f70600dd5f1c35bfe57ce6db994} 
+uint32\+\_\+t {\bfseries IN1}
+\item 
+\Hypertarget{classmotor__driver_ade4a888bbd3c17dd7c7907be9a277f25}\label{classmotor__driver_ade4a888bbd3c17dd7c7907be9a277f25} 
+uint32\+\_\+t {\bfseries IN2}
+\item 
+\Hypertarget{classmotor__driver_adbcc82eff5f0363f33f4c736514be7de}\label{classmotor__driver_adbcc82eff5f0363f33f4c736514be7de} 
+int32\+\_\+t {\bfseries duty}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls a DC motor using PWM and an HBridge Controller. 
+
+The motor takes in a desired range of -\/127 to +127, which is then converted to be between -\/2000 and 2000 for use with the timer channel. The PWM signal is intended to be used with an H Bridge driver like those provided in ME 507 Lab.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & Timer object which corresponds to the pins being used to generate PWM \\
+\hline
+{\em IN1} & MCU Pin for Hbridge Control \\
+\hline
+{\em IN2} & MCU Pin for Hbridge Control \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmotor__driver_a2eead506aa81b940f85787c52214a6d0}\index{motor\_driver@{motor\_driver}!set\_duty@{set\_duty}}
+\index{set\_duty@{set\_duty}!motor\_driver@{motor\_driver}}
+\doxysubsubsection{\texorpdfstring{set\_duty()}{set\_duty()}}
+{\footnotesize\ttfamily \label{classmotor__driver_a2eead506aa81b940f85787c52214a6d0} 
+void motor\+\_\+driver\+::set\+\_\+duty (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{duty}{}\end{DoxyParamCaption})}
+
+
+
+Sets motor speed and direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty} & Desired PWM signal from -\/127 to +127 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/their/\+STM32\+Cube\+IDE/workspace\+\_\+1.\+15.\+0/\+Lab3cpp/\+Core/\+Src/motor\+\_\+driver.\+h\item 
+C\+:/\+Users/their/\+STM32\+Cube\+IDE/workspace\+\_\+1.\+15.\+0/\+Lab3cpp/\+Core/\+Src/\mbox{\hyperlink{motor__driver_8cpp}{motor\+\_\+driver.\+cpp}}\end{DoxyCompactItemize}

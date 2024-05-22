@@ -1,0 +1,96 @@
+\doxysection{RCReceiver Class Reference}
+\hypertarget{class_r_c_receiver}{}\label{class_r_c_receiver}\index{RCReceiver@{RCReceiver}}
+
+
+Measures the pulse width of a signal sent to the MCU by an RC receiver.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_r_c_receiver_aa7d2594f5117b104269fa77e6b60a0e2}\label{class_r_c_receiver_aa7d2594f5117b104269fa77e6b60a0e2} 
+{\bfseries RCReceiver} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}timer, uint32\+\_\+t timer\+\_\+channel)
+\item 
+\Hypertarget{class_r_c_receiver_ae219c934c6ba64a9aa27aa9fc451e8fb}\label{class_r_c_receiver_ae219c934c6ba64a9aa27aa9fc451e8fb} 
+void {\bfseries triggered} ()
+\begin{DoxyCompactList}\small\item\em Call this method when the channel associated with the RC Receiver object has been triggered. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{class_r_c_receiver_ab8e1669ef7f4d1e786879a33349f373c}{getsignal}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current pulse width in us. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{class_r_c_receiver_a44cd3843d562d653bcb5687ae1521e7c}{readdone}} ()
+\begin{DoxyCompactList}\small\item\em used to check whether a full pulse has been measured \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_r_c_receiver_a362673e8a0c3f52992cec27ebec4f30f}\label{class_r_c_receiver_a362673e8a0c3f52992cec27ebec4f30f} 
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries timer}
+\item 
+\Hypertarget{class_r_c_receiver_a9685a5eff6a61c7d52179c8c6b2360f1}\label{class_r_c_receiver_a9685a5eff6a61c7d52179c8c6b2360f1} 
+uint32\+\_\+t {\bfseries timer\+\_\+channel}
+\item 
+\Hypertarget{class_r_c_receiver_a17f3f455a66b9bc66a2879e531f910cd}\label{class_r_c_receiver_a17f3f455a66b9bc66a2879e531f910cd} 
+uint16\+\_\+t {\bfseries count1}
+\item 
+\Hypertarget{class_r_c_receiver_a9f58418b1020bbfb989d7298c1ac4424}\label{class_r_c_receiver_a9f58418b1020bbfb989d7298c1ac4424} 
+uint16\+\_\+t {\bfseries count2}
+\item 
+\Hypertarget{class_r_c_receiver_a9d8ba55a6f450289a1cea1d3e34d1642}\label{class_r_c_receiver_a9d8ba55a6f450289a1cea1d3e34d1642} 
+uint16\+\_\+t {\bfseries diff}
+\item 
+\Hypertarget{class_r_c_receiver_aefbad3fb63e0c6e588c683ee428ff2a3}\label{class_r_c_receiver_aefbad3fb63e0c6e588c683ee428ff2a3} 
+uint16\+\_\+t {\bfseries signal}
+\item 
+\Hypertarget{class_r_c_receiver_a028c1c82cb7ef72e8af61921ebdf6970}\label{class_r_c_receiver_a028c1c82cb7ef72e8af61921ebdf6970} 
+uint8\+\_\+t {\bfseries readcomplete}
+\item 
+\Hypertarget{class_r_c_receiver_ac7b6d5a23add1261d0ffa2e5c35421a0}\label{class_r_c_receiver_ac7b6d5a23add1261d0ffa2e5c35421a0} 
+uint8\+\_\+t {\bfseries falling\+Edge\+Expected}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Measures the pulse width of a signal sent to the MCU by an RC receiver. 
+
+The expected pulse width should be between 1000 and 2000us, centered at 1500us. This class is for use with a direct capture timer channel, capturing both rising and falling edges. Logic has been created to determine if the reading of rising/falling edges is in sync.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & Timer object being used to capture the signal from the RC Receiver \\
+\hline
+{\em timer\+\_\+channel} & Channel of the Timer object being used to capture the pulses. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_r_c_receiver_ab8e1669ef7f4d1e786879a33349f373c}\index{RCReceiver@{RCReceiver}!getsignal@{getsignal}}
+\index{getsignal@{getsignal}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{getsignal()}{getsignal()}}
+{\footnotesize\ttfamily \label{class_r_c_receiver_ab8e1669ef7f4d1e786879a33349f373c} 
+int16\+\_\+t RCReceiver\+::getsignal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current pulse width in us. 
+
+\begin{DoxyReturn}{Returns}
+The current pulse width in us 
+\end{DoxyReturn}
+\Hypertarget{class_r_c_receiver_a44cd3843d562d653bcb5687ae1521e7c}\index{RCReceiver@{RCReceiver}!readdone@{readdone}}
+\index{readdone@{readdone}!RCReceiver@{RCReceiver}}
+\doxysubsubsection{\texorpdfstring{readdone()}{readdone()}}
+{\footnotesize\ttfamily \label{class_r_c_receiver_a44cd3843d562d653bcb5687ae1521e7c} 
+int8\+\_\+t RCReceiver\+::readdone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+used to check whether a full pulse has been measured 
+
+\begin{DoxyReturn}{Returns}
+Flag where 1 is full pulse measurement complete, and 0 is pulse measurement incomplete 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/their/\+STM32\+Cube\+IDE/workspace\+\_\+1.\+15.\+0/\+Lab3cpp/\+Core/\+Src/RCReceiver.\+h\item 
+C\+:/\+Users/their/\+STM32\+Cube\+IDE/workspace\+\_\+1.\+15.\+0/\+Lab3cpp/\+Core/\+Src/\mbox{\hyperlink{_r_c_receiver_8cpp}{RCReceiver.\+cpp}}\end{DoxyCompactItemize}

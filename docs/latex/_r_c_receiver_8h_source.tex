@@ -1,0 +1,40 @@
+\doxysection{RCReceiver.\+h}
+\hypertarget{_r_c_receiver_8h_source}{}\label{_r_c_receiver_8h_source}\index{C:/Users/their/STM32CubeIDE/workspace\_1.15.0/Lab3cpp/Core/Src/RCReceiver.h@{C:/Users/their/STM32CubeIDE/workspace\_1.15.0/Lab3cpp/Core/Src/RCReceiver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ RCReceiver.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 13,\ 2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ their}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ RCRECEIVER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ RCRECEIVER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\#include\ <cstdint>\ //\ for\ uint32\_t,\ etc.}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_r_c_receiver}{RCReceiver}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ TIM\_HandleTypeDef*\ timer;}
+\DoxyCodeLine{00017\ \ \ \ \ uint32\_t\ timer\_channel;}
+\DoxyCodeLine{00018\ \ \ \ \ uint16\_t\ count1;}
+\DoxyCodeLine{00019\ \ \ \ \ uint16\_t\ count2;}
+\DoxyCodeLine{00020\ \ \ \ \ uint16\_t\ diff;}
+\DoxyCodeLine{00021\ \ \ \ \ uint16\_t\ signal;}
+\DoxyCodeLine{00022\ \ \ \ \ uint8\_t\ readcomplete;}
+\DoxyCodeLine{00023\ \ \ \ \ uint8\_t\ fallingEdgeExpected;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_r_c_receiver}{RCReceiver}}(TIM\_HandleTypeDef*\ timer,\ uint32\_t\ timer\_channel);\ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_c_receiver_ae219c934c6ba64a9aa27aa9fc451e8fb}{triggered}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ int16\_t\ \mbox{\hyperlink{class_r_c_receiver_ab8e1669ef7f4d1e786879a33349f373c}{getsignal}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ int8\_t\ \mbox{\hyperlink{class_r_c_receiver_a44cd3843d562d653bcb5687ae1521e7c}{readdone}}();}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ RCRECEIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
